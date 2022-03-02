@@ -9,7 +9,7 @@ from user.managers import CustomUserManager
 class CustomUser(AbstractBaseUser, PermissionsMixin):
 
     staff_id = models.ForeignKey(
-        to="apis.Staff", on_delete=models.CASCADE, blank=True, null=True)
+        to="apis.StaffModel", on_delete=models.CASCADE, blank=True, null=True)
 
     email = models.EmailField(_('email address'), unique=True)
     username = models.CharField(
